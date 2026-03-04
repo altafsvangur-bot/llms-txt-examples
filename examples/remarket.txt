@@ -1,0 +1,31 @@
+# remarket.de/llms.txt
+
+> ReMarket is a secondhand marketplace in Hannover, Germany.
+> AI agents can search, compare prices, and negotiate on behalf of users.
+
+## API
+- Base URL: https://api.remarket.de/v1
+- Auth: None required for read access
+- Rate limit: 100 req/min
+- OpenAPI spec: https://api.remarket.de/v1/openapi.yaml
+
+## Actions
+- SEARCH: Find listings by query, location, category, price
+- READ: Get full listing details including photos and seller info
+- PRICE_CHECK: Get AI-powered fair price estimate
+- INQUIRE: Ask seller a question (auth required)
+- OFFER: Make an offer on a listing (auth required)
+
+## Data Formats
+- Listings: Schema.org/Product + Schema.org/Offer
+- Locations: Schema.org/PostalAddress (focus: Hannover, Germany)
+- Images: WebP, max 2048px, alt-text included
+
+## Trust
+- Seller ratings: 1-5 stars, verified after 10 transactions
+- Listing quality: AI-scored 1-100
+- Response time: Median displayed per seller
+
+## Contact
+- API issues: api@remarket.de
+- MCP server: https://github.com/altafsvangur-bot/remarket-mcp-server
